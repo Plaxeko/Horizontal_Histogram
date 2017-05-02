@@ -1,10 +1,17 @@
 int main(int argc, char * argv[])
 {
+        cout << "************************" << endl;
+        cout << "*                      *" << endl;
+        cout << "*   Count Characters   *" << endl;
+        cout << "*   Print Horizontal   *" << endl;
+        cout << "*       Histogram      *" << endl;
+        cout << "*                      *" << endl;
+        cout << "************************" << endl;
 
         int total[26] = {0};
         int c ;
 //count char frequency in file
-        while ( ! cin.eof() )
+        while ( ! cin.eof())
         {
           c = cin.get();
             if (isalpha(c))
@@ -23,7 +30,7 @@ int main(int argc, char * argv[])
         int max = total[0];
 
 //get max
-        for(int j = 0; j < 26; j++ )
+        for(int j = 0; j < 26; j++)
         {
            if (total[j] > max)
            {
@@ -35,15 +42,15 @@ int main(int argc, char * argv[])
 
 //graph header
          cout << endl << "Graph:" << endl;
-         cout << ' ' << endl << endl;;
+         cout << endl;
 
 //generate histogram
-         for( int lines = 0; lines < 26; lines++ )
+         for( int lines = 0; lines < 26; lines++)
          {
-            printf("%*i %c ", 4 ,total[lines], lines+'a');
-                for ( int i = 0; i < 50; i++ )
+            printf("%*i |%c| ", 6 ,total[lines], lines+ 'a' );
+                for ( int i = 0; i < 50; i++)
                 {
-                    if( total[lines] > max * i / 50 )
+                    if(total[lines] > max * i / 50)
                     {
                        cout << "=";
                     }
