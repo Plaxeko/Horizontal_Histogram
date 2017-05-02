@@ -1,2 +1,3 @@
 # Horizontal_Histogram
-Parse text file of any size and count characters. Then display on horizontal histogram
+Simple program to parse a text file of any size and count characters. Then display the count using a horizontal histogram to display the frequency compared to the other characters. 
+
